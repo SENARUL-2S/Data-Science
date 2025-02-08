@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 iris=pd.read_csv('C:\\LEVEL-2 SEM-2\\data science\\iris.csv')
+
 #print(iris.head())
 # print(iris.sample(5))
 # plt.scatter(iris['SepalLengthCm'],iris['PetalLengthCm'])
