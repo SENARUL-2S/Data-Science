@@ -132,19 +132,63 @@ df = pd.read_csv('C:\\LEVEL-2 SEM-2\\data science\\batter.csv')
 # plt.show()
 
 
-fig, ax = plt.subplots(nrows=2, ncols=1, figsize=(6, 8), sharex=True)  # Create 2 subplots
+# fig, ax = plt.subplots(nrows=2, ncols=1, figsize=(6, 8), sharex=True)  # Create 2 subplots
+
+# # First scatter plot
+# ax[0].scatter(df['avg'], df['strike_rate'],color='red')
+# ax[0].set_title('Something')  # Corrected title method
+
+# ax[0].set_ylabel('Strike Rate')
+
+# # Second scatter plot
+# ax[1].scatter(df['avg'], df['runs'])
+# ax[1].set_title('Something')  # Corrected title method
+# ax[1].set_xlabel('Avg')
+# ax[1].set_ylabel('Runs')
+
+# plt.tight_layout()  # Adjust layout for better spacing
+# plt.show()
+
+
+# ak ar odhik grph ak sathe vvi
+
+# fig, ax = plt.subplots(nrows=2, ncols=2, figsize=(10, 10))  # Create 2 subplots
 
 # First scatter plot
-ax[0].scatter(df['avg'], df['strike_rate'])
-ax[0].set_title('Something')  # Corrected title method
+# ax[0, 0].scatter(df['avg'], df['strike_rate'], color='red')
+# ax[0, 1].scatter(df['avg'], df['runs'])
+# ax[1, 0].hist(df['avg'])  # You may want to add another argument for the second axis
+# ax[1, 1].hist(df['runs'])  # Just an example, you can adjust as needed
 
-ax[0].set_ylabel('Strike Rate')
+# plt.tight_layout()  # Adjust layout for better spacing
+# plt.show()
 
-# Second scatter plot
-ax[1].scatter(df['avg'], df['runs'])
-ax[1].set_title('Something')  # Corrected title method
-ax[1].set_xlabel('Avg')
-ax[1].set_ylabel('Runs')
 
-plt.tight_layout()  # Adjust layout for better spacing
+# 3D scatter plots- 3 man niya kaj kore
+# ax=plt.subplot(projection='3d')
+# ax.scatter3D(df['runs'],df['avg'], df['strike_rate'])
+# plt.show()
+
+# ax=plt.subplot(projection='3d')
+# ax.scatter3D(df['runs'],df['avg'], df['strike_rate'])
+# ax.set_title('somthing')
+# ax.set_xlabel('runs')
+# ax.set_ylabel('avg')
+# ax.set_zlabel('strike_rate')
+# plt.show()
+
+# ax=plt.subplot(projection='3d')
+# ax.plot3D(df['runs'],df['avg'], df['strike_rate'])
+# ax.set_title('somthing')
+# ax.set_xlabel('runs')
+# ax.set_ylabel('avg')
+# ax.set_zlabel('strike_rate')
+# plt.show()
+
+ax=plt.subplot(projection='3d')
+ax.plot3D(df['runs'],df['avg'], df['strike_rate'],color='red')
+ax.set_title('somthing')
+ax.set_xlabel('runs')
+ax.set_ylabel('avg')
+ax.set_zlabel('strike_rate')
 plt.show()
