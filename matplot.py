@@ -169,6 +169,12 @@ d = pd.read_csv('C:\\LEVEL-2 SEM-2\\data science\\batsman_season_record.csv')
 # plt.bar(d['batsman'],d['2015'],width=0.5) # width bar ar size komabe
 # plt.show()
 
+# matplotlib_advanced a easy way te deya acse
+
+# d.plot(kind='bar')
+# plt.show()
+
+#or
 # plt.bar(np.arange(d.shape[0])-0.2,d['2015'],width=0.2)
 # plt.bar(np.arange(d.shape[0]),d['2016'],width=0.2)
 # plt.bar(np.arange(d.shape[0])+0.2,d['2017'],width=0.2)
@@ -181,7 +187,13 @@ d = pd.read_csv('C:\\LEVEL-2 SEM-2\\data science\\batsman_season_record.csv')
 # plt.xticks(np.arange(d.shape[0]),d['batsman']) # ...............
 # plt.show()
 
+
 #stacked bar chart - aktar opor arekta thake 
+
+# matplotlib_advanced a easy way te deya acse
+df.plot(kind='bar',stacked=True)
+plt.show()
+
 # plt.bar(d['batsman'],d['2015'] , color='red')
 # plt.bar(d['batsman'],d['2016'] ,bottom=d['2015'] , color='blue')
 # plt.bar(d['batsman'],d['2017'] ,bottom=(d['2015'] +d['2016'] ), color='yellow')

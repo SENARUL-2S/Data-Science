@@ -185,10 +185,89 @@ df = pd.read_csv('C:\\LEVEL-2 SEM-2\\data science\\batter.csv')
 # ax.set_zlabel('strike_rate')
 # plt.show()
 
-ax=plt.subplot(projection='3d')
-ax.plot3D(df['runs'],df['avg'], df['strike_rate'],color='red')
-ax.set_title('somthing')
-ax.set_xlabel('runs')
-ax.set_ylabel('avg')
-ax.set_zlabel('strike_rate')
+#color 
+# ax=plt.subplot(projection='3d')
+# ax.plot3D(df['runs'],df['avg'], df['strike_rate'],color='red')
+# ax.set_title('somthing')
+# ax.set_xlabel('runs')
+# ax.set_ylabel('avg')
+# ax.set_zlabel('strike_rate')
+# plt.show()
+
+# 3D surface plotS- kaj kore machine learning and mathemetical function 
+# 3D contour graphs- 3D ke 2D te convert kore
+# heapmat plot
+
+
+# pandas plot
+
+# s=pd.Series([1,2,3,4,5,6])
+# s.plot(kind='line')
+# plt.show()
+
+# df.plot(kind='scatter',x='avg',y='runs',title='summary',color='red',marker='+',figsize=(10,10))
+# plt.show()
+
+# onek function use kora jai
+
+# df.plot(kind='scatter',x='avg',y='runs',title='summary',marker='+',figsize=(10,10),s='strike_rate',c='runs',cmap='winter')
+# plt.show()
+
+
+# line plot  vvi
+
+# df.plot(kind='line')
+# plt.show()
+
+# jodi 2 ta colum chai tahole
+# df[['avg','runs']].plot(kind='line')
+# plt.show()
+
+# bar chart 
+
+bf= pd.read_csv('C:\\LEVEL-2 SEM-2\\data science\\batsman_season_record.csv')
+# bf.plot(kind='bar')
+# plt.show()
+
+# jodi 1 joner chai 
+# bf['2015'].plot(kind='bar')
+# plt.show()
+
+# stacked bar chart
+
+# bf.plot(kind='bar',stacked=True)
+# plt.show()
+
+
+# histogram 
+
+# bf.plot(kind='hist')
+# plt.show()
+
+bf.plot(kind='line',subplots=True)
 plt.show()
+
+
+# bf[['2016','2015']].plot(kind='hist')
+# plt.show()
+
+
+# pie chart
+# bf['2016'].plot(kind='pie',labels=bf['batsman'].values, autopct='%0.1f%%')
+# plt.show()
+
+
+# multiple pie chart 
+
+pf = pd.DataFrame(
+    {
+        'batsman':['Dhawan','Rohit','Kohli','SKY','Pandya','Pant'],
+        'match1':[120,90,35,45,12,10],
+        'match2':[0,1,123,130,34,45],
+        'match3':[50,24,145,45,10,90]
+    }
+)
+# pf[['match1','match2','match3']].plot(kind='pie',subplots=True,figsize=(15,10))
+# plt.show()
+
+
