@@ -13,10 +13,10 @@ shape= df.shape # shape holo akta attrubute ja row and colum dekhabe kototi ache
 #shape[0] =row
 #shape[1]=colum dekhabe
 #print(shape)
-#info=df.info()
+info=df.info()
 #print(info) # memory koto use kore, data type ,index ,row, entities etc discuss kore.
 describe=df.describe()
-#print (describe) # numerical data ar opor kaj kore
+print (describe) # numerical data ar opor kaj kore
 
 c1=df['winner'] # shudu winner colum dekhabe
 #print(c1)

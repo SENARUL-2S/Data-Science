@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import seaborn_demo as sns
 import matplotlib.pyplot as plt
 
 iris=pd.read_csv('C:\\LEVEL-2 SEM-2\\data science\\iris.csv')
@@ -244,8 +245,8 @@ bf= pd.read_csv('C:\\LEVEL-2 SEM-2\\data science\\batsman_season_record.csv')
 # bf.plot(kind='hist')
 # plt.show()
 
-bf.plot(kind='line',subplots=True)
-plt.show()
+# bf.plot(kind='line',subplots=True)
+# plt.show()
 
 
 # bf[['2016','2015']].plot(kind='hist')
@@ -253,8 +254,8 @@ plt.show()
 
 
 # pie chart
-# bf['2016'].plot(kind='pie',labels=bf['batsman'].values, autopct='%0.1f%%')
-# plt.show()
+bf['2016'].plot(kind='pie',labels=bf['batsman'].values, autopct='%0.1f%%')
+plt.show()
 
 
 # multiple pie chart 

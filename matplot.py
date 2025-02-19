@@ -1,39 +1,39 @@
 import numpy as np
 import pandas as pd
-
+import seaborn as sns
 import matplotlib.pyplot as plt
 # types of data 
-#numerical age, weight, 
-# categorical --phone name ,depertment name
-# 2D plot- for bivariate Analysis
+#numerical data-> age, weight, 
+# categorical dta->phone name ,depertment name
+# 2D plot->
 # kaj kore catagorical-numerical and numerical-numerical
 
 price =[10,15,20,9,5]
 year=[2012,2013,2014,2015,2016]
-#plt.plot(year,price)
-#plt.show()
-price =[10,15,20,9,5]
-year=[2012,2013,2014,2015,2016]
-#plt.plot(year,price)
-#plt.xlim(0,100)
-#plt.ylim(2012,2017)
-#plt.show()
+# plt.plot(year,price)
+# plt.show()
+ 
+# #plt.plot(year,price)
+# plt.xlim(2012,2017) # mane graph a x ar limit man 2012-2017 thakbe
+# plt.ylim(0,100)
+# plt.show()
 
 df = pd.read_csv('C:\\LEVEL-2 SEM-2\\data science\\sharma-kohli.csv')
-#print(df)
-#plt.plot(df['index'],df['V Kohli'])
-#plt.plot(df['index'],df['RG Sharma'])
-#plt.show()
-
-# tittle x,y borabor name deya
+# print(df)
 # plt.plot(df['index'],df['V Kohli'])
-# plt.plot(df['index'],df['RG Sharma'])
+# #plt.plot(df['index'],df['RG Sharma'])
+# plt.show()
+
+# tittle a x,y borabor name deya
+
+# plt.plot(df['index'],df['V Kohli']) # duita colum ar upor
+# plt.plot(df['index'],df['RG Sharma']) # akadik add kora jabe aksathe
 # plt.title('rohit vs kohli')
 # plt.xlabel('season')
 # plt.ylabel('runs')
 # plt.show()
 
-#color change line ar
+#line ar color change korte..
 # plt.plot(df['index'],df['V Kohli'],color='Green')
 # plt.plot(df['index'],df['RG Sharma'],color='red')
 # plt.title('rohit vs kohli')
@@ -77,7 +77,7 @@ df = pd.read_csv('C:\\LEVEL-2 SEM-2\\data science\\sharma-kohli.csv')
 # plt.legend()
 # plt.show()
 
-# indicate korbe je label ta kothai hobe
+# indicate korbe je legend ta kothai hobe
 #'best', 'upper right', 'upper left', 'lower left', 'lower right', 'right', 'center left', 'center right', 'lower center', 'upper center', 'center'
 # plt.plot(df['index'], df['V Kohli'], color='green', linestyle='solid', linewidth=3, 
 #          marker='d', markersize=5, label='Kohli')
@@ -87,7 +87,7 @@ df = pd.read_csv('C:\\LEVEL-2 SEM-2\\data science\\sharma-kohli.csv')
 # plt.title('Rohit vs Kohli')
 # plt.xlabel('Season')
 # plt.ylabel('Runs')
-# plt.legend(loc='bes') # best means jekhane faka pabe bose jabe
+# plt.legend(loc='best') # best means jekhane faka pabe bose jabe
 # plt.show()
 
 # grid point ke nirdharon korte sahajjo kore
@@ -104,7 +104,7 @@ df = pd.read_csv('C:\\LEVEL-2 SEM-2\\data science\\sharma-kohli.csv')
 # plt.show()
 # one problem line dekhai na 
 
-#scatter plots- numerical to numerical data nya kaj kore
+#scatter plots- numerical to numerical data niya kaj kore
 
 dft = pd.read_csv('C:\\LEVEL-2 SEM-2\\data science\\batter.csv')
 pf=dft.head(50)
@@ -114,15 +114,7 @@ pf=dft.head(50)
 # plt.show()
 
 # dot ar size: joto besi man toto dot boro dekhai 
-# if 'size' not in pf.columns:
-#     pf['size'] = pf['strike_rate'] / 10  # অথবা অন্য লজিক ব্যবহার করতে পারেন
-
-# # Scatter plot
-# plt.scatter(pf['avg'], pf['strike_rate'], s=pf['size'] * 20)
-# plt.xlabel("Batting Average")
-# plt.ylabel("Strike Rate")
-# plt.title("Batting Average vs Strike Rate")
-# plt.show()
+# look seaborn scatter plot
 
 # replace for scatter plot - line draw kore dibe
 # plt.plot(pf['avg'],pf['strike_rate'])
@@ -191,8 +183,8 @@ d = pd.read_csv('C:\\LEVEL-2 SEM-2\\data science\\batsman_season_record.csv')
 #stacked bar chart - aktar opor arekta thake 
 
 # matplotlib_advanced a easy way te deya acse
-df.plot(kind='bar',stacked=True)
-plt.show()
+# df.plot(kind='bar',stacked=True)
+# plt.show()
 
 # plt.bar(d['batsman'],d['2015'] , color='red')
 # plt.bar(d['batsman'],d['2016'] ,bottom=d['2015'] , color='blue')
@@ -230,7 +222,7 @@ gale=pd.read_csv('C:\\LEVEL-2 SEM-2\\data science\\gayle-175.csv')
 
 #color change 
 
-# chart save hobe
+# chart save hobe-> plt.savefig("sample.png")
 
 # plt.pie(gale['batsman_runs'],labels=gale['batsman'],autopct= '%0.1f%%',colors=['red','blue','green','yellow','pink','brown'])
 # plt.savefig("sample.png") 
@@ -245,8 +237,8 @@ gale=pd.read_csv('C:\\LEVEL-2 SEM-2\\data science\\gayle-175.csv')
 
 # plt.style.use('color_name dite hobe')
 #exaple
-# plt.style.use('ggplot')
-# age=[20, 25,30,15,100]
-# name=['A','B','C','D','E']
-# plt.pie(age ,labels= name )
-# plt.show()
+plt.style.use('ggplot')
+age=[20, 25,30,15,100]
+name=['A','B','C','D','E']
+plt.pie(age ,labels= name )
+plt.show()
